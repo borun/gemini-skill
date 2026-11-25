@@ -1,0 +1,130 @@
+{
+  "verified_on": "2026-11-26",
+  "sources": {
+    "prices": "https://aistudio.google.com/docs/pricing",
+    "effort": "https://aistudio.google.com/docs/thinking",
+    "models": "https://aistudio.google.com/docs/models"
+  },
+  "units": "input/output: USD per 1M tokens on the paid tier; thinking tokens bill as output. per_image: approximate USD per 1K image. changes: scheduled price changes, applied automatically from their date.",
+  "effort_levels": [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh"
+  ],
+  "models": {
+    "gemini-4-carbon": {
+      "use_for": "Google's strongest reasoning model, built for complex software engineering. Hardest reviews and design questions. Slowest. Needs a billing-enabled key.",
+      "input": 2.0,
+      "output": 10.0,
+      "changes": [
+        {
+          "from": "2026-12-01",
+          "input": 4.0,
+          "output": 20.0
+        }
+      ],
+      "effort": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_effort": "medium",
+      "free_tier": false
+    },
+    "gemini-4-neon": {
+      "use_for": "Frontier-level and fast. Strong all-round second opinion; needs a billing-enabled key.",
+      "input": 3.0,
+      "output": 15.0,
+      "effort": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_effort": "high",
+      "free_tier": false
+    },
+    "gemini-4-argon": {
+      "use_for": "Efficient frontier reasoning: fewer tokens and faster than Carbon for complex coding. Needs a billing-enabled key.",
+      "input": 2.0,
+      "output": 10.0,
+      "changes": [
+        {
+          "from": "2026-12-01",
+          "input": 4.0,
+          "output": 20.0
+        }
+      ],
+      "effort": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_effort": "medium",
+      "free_tier": false
+    },
+    "gemini-4-hydrogen": {
+      "use_for": "Everyday coding and agentic questions at half Neon's price. The built-in default: works with free-tier keys.",
+      "input": 1.5,
+      "output": 7.5,
+      "effort": [
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default_effort": "high",
+      "free_tier": true
+    },
+    "gemini-3.8-flash": {
+      "use_for": "Quick, cheap checks.",
+      "input": 0.75,
+      "output": 3.75,
+      "changes": [
+        {
+          "from": "2027-01-01",
+          "input": 1.5,
+          "output": 7.5
+        }
+      ],
+      "effort": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_effort": "medium",
+      "free_tier": true
+    },
+    "gemini-3.5-flash-lite": {
+      "use_for": "Fastest and cheapest: trivial or high-volume tasks.",
+      "input": 0.3,
+      "output": 2.5,
+      "effort": [
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "default_effort": "minimal",
+      "free_tier": true
+    },
+    "gemini-nano-banana-2.1": {
+      "use_for": "Default image model: general images and edits.",
+      "per_image": 0.0336
+    },
+    "gemini-3-pro-image": {
+      "use_for": "Text-heavy or professional images; about 4x the default's price.",
+      "per_image": 0.134
+    },
+    "gemini-3.1-flash-image": {
+      "use_for": "Previous-generation image model.",
+      "per_image": 0.067
+    },
+    "gemini-3.1-flash-lite-image": {
+      "use_for": "Cheapest images; weaker with several reference images.",
+      "per_image": 0.0336
+    }
+  }
+}
